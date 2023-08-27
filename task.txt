@@ -1,0 +1,99 @@
+1.Write a blog on Difference between HTTP1.1 vs HTTP2
+Introduction:
+
+In the dynamic world of the internet, where information travels at the speed of light, protocols governing communication play a pivotal role.
+One of the most fundamental protocols is the Hypertext Transfer Protocol (HTTP), which enables the retrieval of resources like web pages and multimedia files from servers. 
+Over time, HTTP has undergone significant enhancements to accommodate the ever-growing demands of modern web applications.
+This evolution gave rise to HTTP/1.1 and later HTTP/2, two versions with notable differences that impact the performance and efficiency of web communications. In this blog, we delve into the key distinctions between HTTP/1.1 and HTTP/2.
+
+1. Connection Multiplexing:
+
+HTTP/1.1: In the HTTP/1.1 protocol, each request-response cycle is tied to a single connection. 
+This means that a browser could only request one resource at a time from a server, leading to suboptimal performance, especially on high-latency connections.
+
+HTTP/2: One of the standout features of HTTP/2 is its multiplexing capability. 
+It allows multiple requests and responses to be sent and received simultaneously over a single connection. 
+This feature greatly reduces the overhead associated with setting up multiple connections, leading to faster loading times and improved efficiency, particularly for complex web pages.
+
+2. Header Compression:
+
+HTTP/1.1: Each HTTP request and response includes a set of headers containing metadata about the communication. 
+These headers can be verbose and redundant, resulting in increased latency and bandwidth usage, especially when making numerous requests.
+
+HTTP/2: HTTP/2 tackles this issue with header compression. It uses a technique called HPACK to compress headers, reducing the size of header data and consequently improving performance. 
+This optimization is particularly beneficial for mobile devices and users with limited bandwidth.
+
+3. Server Push:
+
+HTTP/1.1: In HTTP/1.1, resources are requested by the client, and the server responds with those resources. 
+However, there is no built-in mechanism for the server to proactively push resources that it predicts the client will need.
+
+HTTP/2: Server push is a remarkable feature of HTTP/2. It enables the server to anticipate and push resources to the client before they are explicitly requested. 
+This proactive approach reduces latency and optimizes page loading, enhancing the user experience.
+
+4. Prioritization:
+
+HTTP/1.1: HTTP/1.1 lacks the ability to explicitly prioritize requests. As a result, resources may be downloaded in an order that doesn't necessarily align with the importance of elements on a webpage.
+
+HTTP/2: HTTP/2 introduces stream prioritization, allowing developers to assign priority levels to different resources.
+ This ensures that critical resources are fetched and rendered before less important ones, further enhancing performance and user perception.
+
+5. Binary Protocol:
+
+HTTP/1.1: HTTP/1.1 uses a text-based format for requests and responses, which is human-readable but can be inefficient in terms of data transfer.
+
+HTTP/2: HTTP/2 employs a binary protocol for communication. While not human-readable, this format is highly optimized for machine processing, resulting in reduced parsing complexity and improved efficiency.
+
+Conclusion:
+The shift from HTTP/1.1 to HTTP/2 marks a significant advancement in web communication protocols.
+HTTP/2's multiplexing, header compression, server push, prioritization, and binary protocol have collectively addressed many of the limitations and performance bottlenecks of its predecessor.
+These improvements lead to faster loading times, reduced latency, and an overall enhanced browsing experience.
+As the internet continues to evolve, staying informed about these foundational changes empowers developers and users alike to make the most out of the digital landscape.
+
+
+
+2.Write a blog about objects and its internal representation in Javascript
+
+Introduction:
+In the realm of programming languages, objects stand as a cornerstone, enabling developers to model real-world entities and construct complex data structures.
+JavaScript, as a versatile and dynamic scripting language, places a significant emphasis on objects.
+Beyond their surface-level usage, understanding the internal representation of objects in JavaScript is crucial for harnessing the language's power effectively. In this blog, we'll delve into the fascinating world of objects, exploring how they are structured and represented behind the scenes.
+
+1. Objects in JavaScript: A Primer
+
+In JavaScript, an object is a composite data type that allows you to store and organize multiple values, called properties, and functions, known as methods, under a single entity. 
+Objects can represent everything from simple structures like dictionaries to intricate constructs like user interfaces and database connections.
+
+2. The Anatomy of JavaScript Objects
+
+At its core, a JavaScript object is essentially a collection of key-value pairs, where keys are strings (or Symbols) that uniquely identify properties, and values can be of any data type, including other objects, arrays, functions, and primitive types.
+
+3. Object Creation
+
+There are various ways to create objects in JavaScript:
+
+Object Literal: Using curly braces {}, you can define an object and populate it with properties and methods.
+Constructor Functions: You can create object templates using constructor functions and then instantiate new objects based on that template.
+ES6 Classes: Introduced in ECMAScript 2015, classes provide syntactic sugar for creating constructor functions and prototypes, simplifying the process of defining and instantiating objects.
+
+4. Object's Internal Representation
+
+Internally, JavaScript engines use a combination of data structures and mechanisms to represent objects efficiently:
+
+Properties Table: Objects have an internal properties table where property keys are stored as strings (or Symbols) along with corresponding memory addresses pointing to the values. This allows for fast property access.
+Prototype Chain: Objects can inherit properties and methods from other objects through a mechanism called the prototype chain. This enables the creation of shared behaviors and efficient memory usage.
+Hidden Classes and Shape Trees: Some JavaScript engines optimize object property access by using hidden classes and shape trees. These mechanisms help reduce the cost of property lookup and improve performance.
+5. Memory Management and Garbage Collection
+
+JavaScript engines handle memory management and garbage collection automatically. When objects are no longer referenced, they become eligible for garbage collection, where the engine reclaims memory occupied by these objects to prevent memory leaks.
+
+6. Pass by Reference
+
+When assigning an object to a variable or passing it as a function argument, JavaScript follows a pass-by-reference approach. This means that the variable holds a reference to the object's memory location, rather than the object itself. 
+Changes to the object are reflected through all references.
+
+Conclusion: Unlocking the Potential of JavaScript Objects
+
+Understanding the internal representation of objects in JavaScript empowers developers to write more efficient and performant code.
+Whether you're creating simple data structures or building sophisticated applications, grasping the underlying mechanisms of objects can lead to optimized memory usage, streamlined performance, and a deeper appreciation for the elegance of JavaScript's object-oriented paradigm.
+So, the next time you're working with objects in JavaScript, remember that there's more than meets the eye – a world of key-value pairs, prototype chains, and memory management at play behind the scenes.
